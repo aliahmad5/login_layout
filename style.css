@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+:root{
+    --main-color: #0b7ef3;
+    --background-color: #e4eaf8;
+    --dark-background-color: #dbddeb;
+    --text-color: #a5aab3;
+    --black: #222;
+    --white: #fff;
+    --box-shadow: 0 .6rem 1.6rem #bebfdd;
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 200;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(180deg, var(--background-color), var(--dark-background-color));
+    overflow-y: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+      
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.card-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-container .card-content{
+    background: var(--white);
+    margin: 3rem;
+    box-shadow: var(--box-shadow);
+    max-width: 80rem;
+    height: 40rem;
+}
+
+.card-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: url('./src/img/card_bacground.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.card-background .card-title{
+    color: var(--white);
+    text-align: center;
+    margin: 2rem;
+}
+
+.card-background .card-title span{
+    font-size: 1rem;
+    color: var(--white);
+    letter-spacing: 0.2rem;
+}
+
+.card-background .card-title h2{
+    font-size: 3rem;
+    color: var(--white);
+    letter-spacing: 0.3rem;
+}
+
+.card-background .card-title .text-title hr{
+    text-align: center;
+    border: 1.5px solid var(--white);
+    border-radius: 8rem;
+    margin: 0 2rem 0 2rem;
+}
+
+.card-title .card-text p{
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 1rem 2rem 0 2rem;
+    font-weight: 300;
+}
+
+.card-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 2rem 5rem 0 5rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.login-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-text h2{
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.login-input{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-input input{
+    margin: 0.6rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border: none;
+    background: #f7f7f9;
+    border-left: 3px solid var(--main-color);
+}
+
+.login-check{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-check a{
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.login-checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.login-checkbox .checkbox{
+    width: 15px;
+}
+
+
+.btn-subscribe{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.btn-subscribe button{
+    width: 100%;
+    height: 3rem;
+    background: var(--main-color);
+    border: none;
+    color: var(--white);
+    font-weight: 400;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: .2s ease-in;
+}
+
+.btn-subscribe button:hover{
+    opacity: 0.8;
+    transform: translateY(2px);
+}
+
+.card-container .assinatura {
+    font-size: 1.2rem;
+    margin-top: -2rem;
+}
+
+.card-container .assinatura b{
+    font-weight: 600;
+}
+
+
+
+/* Breakpoint */
+@media (max-width: 600px) { 
+    
+    .card-content{
+        flex-direction: column;
+    }
+
+    .card-container .card-content{
+        height: 55rem;
+    }
+
+    .card-background{
+        height: 24rem;
+    }
+
+}
+  
+@media (max-width: 380px) { 
+
+    .card-container .card-content {
+        height: 57rem;
+    }
+
+    .login-check {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
